@@ -45,7 +45,6 @@ class Gestor():
         for x in self.__Usuarios:
             if(x.retornarUsuario()== usuario):
                 return json.dumps(x.__dict__)
-            return "NoObject"
     #proceso de agregar actualizar y eliminar
     def agregarUsuario(self, usuario):
         self.__Usuarios.append(usuario)
