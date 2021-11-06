@@ -38,10 +38,8 @@ def register():
         return jsonify({"data":"invalid password"})
 @app.route('/usuarioIngresado/<string:usuario>')
 def usuarioIngresado(usuario):
-    try:
         return administrador.retornarUsuarioIngresado(usuario)
-    except Exception:
-        return jsonify({"Json incorrecto"})
+
 @app.route("/inicio/<usuario>/<string:password>",methods=['GET'])
 def inicio(usuario=None,password=None):
         passwordE= password
