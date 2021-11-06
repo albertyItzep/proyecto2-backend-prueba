@@ -4,7 +4,6 @@ from flask import Flask, app ,jsonify
 import json
 from flask import request
 from flask_cors import CORS
-from werkzeug.wrappers.request import PlainRequest
 from Gestor import Gestor
 from Usuario import Usuario
 from Publicacion import Publicacion
