@@ -18,7 +18,7 @@ administrador= Gestor()
 
 @app.route('/')
 def central():
-    return "[\"data\":\"true\"]"
+    return "hello"
 
 @app.route('/register',methods=['POST'])
 def register():
