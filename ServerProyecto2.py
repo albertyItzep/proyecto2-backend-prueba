@@ -173,5 +173,4 @@ def like(id):
 @app.route('/graficsR/<string:user>')
 def graficas(user):
     return administrador.retornargrafUs(user)
-
-app.run(host='0.0.0.0',debug=True,port=5000)
+app.run(host="0.0.0.0", port=3000, debug=True)
