@@ -13,9 +13,9 @@ class Gestor():
         self.__Usuarios=[]
         self.__Usuarios.append(Usuario('Fernando Cardona','m','admin@ipc1.com','admin','admin@ipc1'))      
         self.__Usuarios.append(Usuario('Albertt Itzep','m','alberttitzep123@gmail.com','angor123','sistemas123@'))
-        self.__Publicaciones.append(Publicacion('Imagen','https://cms.volaris.com/globalassets/new-content-pages/servicios-especiales/animales-de-servicio/perro-de-servicio-m.9.png','Cultura','jose','12/12/2020'))
-        self.__Publicaciones.append(Publicacion('Imagen','http://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg','Deportes','jose123','08/09/2021'))
-        self.__Publicaciones.append(Publicacion('Imagen','http://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg','Niños','pedrito123','12/06/2021'))
+        self.__Publicaciones.append(Publicacion('Imagen','https://cdn.pixabay.com/photo/2021/10/19/12/30/elephant-6723452_960_720.jpg','Cultura','jose','12/12/2020'))
+        self.__Publicaciones.append(Publicacion('Imagen','https://cdn.pixabay.com/photo/2021/09/22/00/28/kitten-6645241_960_720.jpg','Deportes','jose123','08/09/2021'))
+        self.__Publicaciones.append(Publicacion('Imagen','https://cdn.pixabay.com/photo/2021/07/20/18/19/bald-eagle-6481346_960_720.jpg','Niños','pedrito123','12/06/2021'))
         self.__Publicaciones.append(Publicacion('Video','https://youtu.be/JpoEFiAJdxo','Cultura','pedrito123','23/09/2021'))
         self.__Publicaciones.append(Publicacion('Video','https://www.youtube.com/watch?v=rsTLyukvxGU','Internacional','pedrito123','22/07/2021'))
         self.__Publicaciones.append(Publicacion('Video','https://www.youtube.com/watch?v=rsTLyukvxGU','Actualidad','jose123','13/07/2021'))
@@ -100,9 +100,6 @@ class Gestor():
         return json.dumps([ob.__dict__ for ob in self.__Usuarios])
     #publicacion con mas likes
     def MasLikes(self):
-        for x in self.__Publicaciones:
-            comienza = random.randint(0, 100)
-            x.asignarLike(comienza)
         self.__Publicaciones=sorted(self.__Publicaciones,reverse=True)
         return json.dumps([ob.__dict__ for ob in self.__Publicaciones])
     def agregarLike(self,id):
