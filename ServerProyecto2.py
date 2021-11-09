@@ -171,7 +171,7 @@ def MasLikes():
 def like(id):
     return jsonify({"data":administrador.agregarLike(id)})
 
-@app.route('likeN/<int:id>')
+@app.route('/likeN/<int:id>')
 def deslike(id):
     return jsonify({"data":administrador.quitarLike(id)})
 
