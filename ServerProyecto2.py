@@ -173,7 +173,8 @@ def like(id):
 
 @app.route('likeN/<int:id>')
 def deslike(id):
-    return administrador.quitarLike()
+    return jsonify({"data":administrador.quitarLike(id)})
+
 @app.route('/graficsR/<string:user>')
 def graficas(user):
     return administrador.retornargrafUs(user)
