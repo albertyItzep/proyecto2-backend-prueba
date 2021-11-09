@@ -39,7 +39,7 @@ class Publicacion():
     def asignarUser(self,user):
         self.__User=user
     def quitarLike(self):
-        self.Like= self.Like-1
+        self.Like-=1
     def __gt__(self,publicacion):
         return self.Like>publicacion.Like
 
