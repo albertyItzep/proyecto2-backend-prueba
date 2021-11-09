@@ -1,7 +1,3 @@
-
-from _typeshed import Self
-
-
 class Publicacion():
     def __init__(self,Type,Url,Category,User,date) -> None:
         self.__User=User
