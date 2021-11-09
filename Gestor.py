@@ -106,7 +106,10 @@ class Gestor():
         self.__Publicaciones[id].asignarlike1()
         valor = (self.__Publicaciones[id])
         return valor.__dict__
-
+    def quitarLike(self,id):
+        self.__Publicaciones[id].quitarLike()
+        valor = (self.__Publicaciones[id])
+        return valor.__dict__
     # agregar a un usuario una publicacion
     def agregarPublicacion(self,publicacion):
         for x in self.__Usuarios:

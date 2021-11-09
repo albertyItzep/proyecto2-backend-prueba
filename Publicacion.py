@@ -1,4 +1,7 @@
 
+from _typeshed import Self
+
+
 class Publicacion():
     def __init__(self,Type,Url,Category,User,date) -> None:
         self.__User=User
@@ -35,6 +38,8 @@ class Publicacion():
         self.Like+=1
     def asignarUser(self,user):
         self.__User=user
+    def quitarLike(self):
+        self.Like-=1
     def __gt__(self,publicacion):
         return self.Like>publicacion.Like
 
